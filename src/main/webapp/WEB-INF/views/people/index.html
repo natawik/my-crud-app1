@@ -7,8 +7,12 @@
 <body>
 
 <div th:each="person : ${people}">
-    <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">user</a>
+    <a th:href="@{/people/{id}(id=${person.getId()})}" 
+       th:text="${person.getName() + ', ' + person.getAge()}">user</a>
 </div>
+<hr/>
+
+<a href="/my-crud-app1/people/new">Create new person</a>
 
 </body>
 </html>
